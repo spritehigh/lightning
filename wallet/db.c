@@ -1105,7 +1105,7 @@ bool sqlite3_bind_sha256(sqlite3_stmt *stmt, int col, const struct sha256 *p)
 
 bool sqlite3_column_sha256_double(sqlite3_stmt *stmt, int col,  struct sha256_double *dest)
 {
-	assert(sqlite3_column_bytes(stmt, col) == sizeof(struct sha256_double));
+	//assert(sqlite3_column_bytes(stmt, col) == sizeof(struct sha256_double));
 	return memcpy(dest, sqlite3_column_blob(stmt, col), sizeof(struct sha256_double));
 }
 
