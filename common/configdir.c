@@ -18,7 +18,6 @@ static char *default_configdir(const tal_t *ctx)
 	if (!env)
 		return ".";
 
-//	path = path_join(ctx, env, ".lightning");
 	path = path_join(ctx, env, ".qtum-lightning");
 	return path;
 }
